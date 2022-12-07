@@ -35,11 +35,9 @@ if (!function_exists('is_plugin_active')) {
 	<header id="main-header" class="main-header <?php echo carbon_get_theme_option( 'mos-header-class' ) ?>">
 		<div class="content-wrap">
 			<div class="container">
-			<?php echo do_shortcode('[site-identity]') ?>
-				<nav class="navbar navbar-expand-lg navbar-dark navbar-custom-bg">			
-					<a class="navbar-brand" href="<?php echo home_url(); ?>">
-						Logo
-					</a>
+			
+				<nav class="navbar bg-light fixed-top">	
+					<?php echo do_shortcode('[site-identity class="" container_class="navbar-brand"]') ?>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>

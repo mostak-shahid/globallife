@@ -1,9 +1,4 @@
-<?php 
-global $globallife_options;
-$from_theme_option = $globallife_options['archive-page-sections'];
-$sections = $from_theme_option['Enabled'];
-unset($sections['content']);
-?><?php get_header() ?>
+<?php get_header() ?>
 <section id="blogs" class="page-content <?php if(@$globallife_options['sections-content-background-type'] == 1) echo @$globallife_options['sections-content-background'];?>">
 	<div class="content-wrap">
 		<div class="container">
@@ -12,8 +7,6 @@ unset($sections['content']);
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', get_post_format() ) ?>
 				<?php endwhile;?>	
-
-
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 			<?php endif;?>
@@ -32,5 +25,4 @@ unset($sections['content']);
 		</div>	
 	</div>
 </section>
-<?php if($sections ) { foreach ($sections as $key => $value) { get_template_part( 'template-parts/section', $key );}}?>
 <?php get_footer() ?>

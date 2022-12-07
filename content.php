@@ -2,6 +2,7 @@
 	<h2 class="header"><?php echo get_the_title() ?></h2>
 	<div class="content">
 	<?php if (is_single()) : ?>
+		<?php //echo get_the_content()?>
 		<?php the_content()?>
 	<?php else : ?>
 		<?php the_excerpt(); ?>	
